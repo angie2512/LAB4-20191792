@@ -6,7 +6,6 @@ import java.util.Objects;
 
 @Entity
 public class Aerolinea {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "idaerolinea")
     private int idaerolinea;

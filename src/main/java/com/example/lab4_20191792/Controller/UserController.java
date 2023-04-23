@@ -26,9 +26,11 @@ public class UserController {
     @PostMapping(value = "/registrousuario")
     public String Registro(Model model, @RequestParam (name = "correo") String correo, @RequestParam (name="contrasena") String contrasena){
 
-        User usuario = usuarioRepository.findByEmailAndPassword(correo,contrasena);
-        model.addAttribute("usuario", usuario);
-
-        return "usuario/homePage";
+        if(usuarioRepository.findByEmailAndPassword(correo,contrasena) > 0){
+            return "redirect:/vuelo";
+        }else{
+            return "redirect:/inicio";
+        }
     }
+
 }
