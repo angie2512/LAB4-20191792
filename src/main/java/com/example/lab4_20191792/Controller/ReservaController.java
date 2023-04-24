@@ -39,7 +39,7 @@ public class ReservaController {
         reserva.setFechaReserva(timestamp);
         reserva.setUser(usuarioRepository.findById(idUsuario).get());
         reserva.setVuelo(vuelo);
-        reservaRepository.save(reserva);
+        reservaRepository.save(reserva); ///guarda en bd
         return "usuario/homePage2";
     }
 }
