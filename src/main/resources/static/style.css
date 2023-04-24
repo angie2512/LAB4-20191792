@@ -17,6 +17,12 @@
     opacity:1;
     pointer-events: auto;
 }
+.mi-modal {
+    display: none;
+}
+#mi-checkbox:checked ~ .mi-modal {
+    display: block;
+}
 .modalDialog > div {
     width: 400px;
     position: relative;

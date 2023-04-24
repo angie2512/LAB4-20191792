@@ -10,11 +10,7 @@ import java.util.List;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<User,Integer>{
-
-
-
-    @Query(value = "SELECT COUNT(*) FROM user WHERE  (email = ?1 and password =?2)", nativeQuery = true)
-    int findByEmailAndPassword(String email, String password);
+    User findByEmailAndPassword(String email, String password);
 
 
 }
